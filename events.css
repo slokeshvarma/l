@@ -1,0 +1,157 @@
+* {
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a {
+	text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body.eventsPage {
+	position: relative;
+}
+body.eventsPage::before {
+	content: "";
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(images/IIChE_Logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 35%;
+    opacity: 0.5;
+    z-index: -1;
+}
+.toHome {
+	margin-top: 1.5rem;
+	padding-left: 2vw;
+}
+.toHome a {
+	color: black;
+}
+.eventCards {
+	margin-top: 5vh;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	place-items: center;
+	gap: 7vh 0;
+	padding-bottom: 10dvh;
+
+}
+.eventCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 40vw;
+	max-width: 45vw;
+	height: calc(.625*45vw);
+	margin-bottom: 1rem;
+}
+.eventImage {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 35vw;
+	height: calc(.5625*35vw);
+	border: 2px solid rgb(0, 0, 0);
+	border-radius: 1.5rem;
+	margin: .5rem;
+}
+.eventImage img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+	border-radius: 1.5rem;
+}
+.eventBG {
+	z-index: -2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: .5rem;
+	width: 35vw;
+	padding: 1rem;
+	margin-top: calc(-.2*40vw);
+	padding-top: calc(.2*40vw);
+	border-radius: 2rem;
+	background-color: black;
+}
+.eventTitle {
+	text-align: center;
+}
+.eventTitle h4 {
+	color: white;
+	font-size: medium;
+}
+.eventTitle p {
+	color: white;
+	font-size: small;
+}
+.eventLink {
+	width: fit-content;
+	background-color: white;
+	padding: 0.25rem 0.5rem;
+	border-radius: 2rem;
+	text-align: center;
+}
+.eventLink a{
+	color: black;
+	font-size: medium;
+}
+.toYearsEvents {
+	margin-top: 1.5rem;
+	padding-left: 2vw;
+}
+.toYearsEvents a {
+	color: black;
+}
+.eventPageTitle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.eventPageTitleSub {
+	margin-top: 1.5rem;
+	text-align: center;
+	background-color: black;
+	width: fit-content;
+	padding: 1rem 2rem;
+	border-radius: 4rem;
+}
+.eventPageTitle h2 {
+	font-weight: normal;
+	color: white;
+}
+.eventPageTitle p {
+	color: White;
+}
+.eventGallery {
+	margin-top: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+  }
+  
+  .eventGallery img.groupPhoto {
+	max-width: 85vw;
+	margin: 0.5rem;
+  }
+  
+  .eventGallery img.photo {
+	max-width: 40vw;
+	margin: 0.5rem;
+  }
+  

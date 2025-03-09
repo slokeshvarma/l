@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>something</title>
+        <style>
+            #slideshow {
+                display: flex;
+                overflow: hidden;
+                gap: 10px;
+            }
+
+            #slideshow img {
+                width: 300px; /* Image size */
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+
+            #slideshow img:hover {
+                transform: scale(1.1);
+            }
+
+            #content {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="slideshow">
+        <img src="images/groupPhoto-1.jpg" alt="Image 1" onclick="showContent(0)">
+        <img src="images/groupPhoto-1.jpg" alt="Image 2" onclick="showContent(1)">
+        <img src="images/groupPhoto-1.jpg" alt="Image 3" onclick="showContent(2)">
+        <img src="images/groupPhoto-1.jpg" alt="Image 4" onclick="showContent(3)">
+        <img src="images/groupPhoto-1.jpg" alt="Image 5" onclick="showContent(4)">
+        <img src="images/groupPhoto-1.jpg" alt="Image 6" onclick="showContent(5)">
+      </div>
+      
+      <div id="content">
+        <h2 id="title">Click an image to view details</h2>
+        <p id="description">Image description will appear here.</p>
+      </div>
+    <script>
+        const contentData = [
+        { title: "Image 1", description: "This is the first image." },
+        { title: "Image 2", description: "This is the second image." },
+        { title: "Image 3", description: "This is the third image." },
+        { title: "Image 4", description: "This is the fourth image." },
+        { title: "Image 5", description: "This is the fifth image." },
+        { title: "Image 6", description: "This is the sixth image." }
+        ];
+        function showContent(index) {
+        document.getElementById("title").textContent = contentData[index].title;
+        document.getElementById("description").textContent = contentData[index].description;
+        }
+        let currentIndex = 0;
+        function autoSlide() {
+            showContent(currentIndex);
+            currentIndex = (currentIndex + 1) % contentData.length;
+        }
+        setInterval(autoSlide, 3000); // Change every 3 seconds
+    </script>
+</body>
+</html>
